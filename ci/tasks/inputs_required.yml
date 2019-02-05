@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+ type: docker-image
+ source: {repository: busybox}
+
+inputs:
+  - name: some-important-input
+run:
+ path: sh
+ args: [./some-important-input/ci/tasks/inputs_required.sh]
