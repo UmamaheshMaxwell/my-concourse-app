@@ -1,6 +1,13 @@
 resources:
-  - name: repo
+  - name: my-git-repo
     type: git
     source:
       uri: https://github.com/UmamaheshMaxwell/contactlist-app.git
-      branch: 
+      branch: master
+jobs:
+ - name: first-job
+   public: true
+   plan:
+    - get: my-git-repo
+    - task: my-first-task
+      file: my-git-repo/ci/tasks/inputs_required.yml
