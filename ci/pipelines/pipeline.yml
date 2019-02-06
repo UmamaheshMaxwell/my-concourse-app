@@ -10,12 +10,4 @@ jobs:
    plan:
     - get: my-git-repo
     - task: my-first-task
-      config: 
-        platform: linux
-        image_resource:
-          type: docker-image
-          source: {repository: busybox}
-        run:
-          path: echo
-          args:
-           - hello world
+      file: my-git-repo/ci/tasks/inputs_required.yml
