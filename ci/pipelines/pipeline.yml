@@ -15,10 +15,8 @@ jobs:
   serial: true
   plan:
   - get: my-git-repo
-  - get: my-trigger
-    trigger: true
   - task: my-first-task
-    file: my-git-repo/ci/tasks/inputs_required.yml
+    file: my-git-repo/ci/tasks/inputs_required.yml -v user=admin pass=admin
 
 
 
