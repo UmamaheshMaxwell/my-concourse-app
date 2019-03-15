@@ -8,4 +8,4 @@ image_resource:
 run:
   path: echo
   args:
-    - hello world ((user))
+    - hello world ((aws_access_key_id))

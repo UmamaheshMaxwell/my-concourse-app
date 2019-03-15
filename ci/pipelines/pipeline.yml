@@ -16,7 +16,8 @@ jobs:
   plan:
   - get: my-git-repo
   - task: my-first-task
-    file: my-git-repo/ci/tasks/inputs_required.yml -v user=admin pass=admin
-
-
+    file: my-git-repo/ci/tasks/inputs_required.yml 
+    params: 
+      aws_access_key_id: ((aws_access_key_id))
+      aws_secret_access_key: ((aws_secret_access_key))
 
