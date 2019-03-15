@@ -24,12 +24,11 @@ jobs:
         path: my-git-repo
 
       run:
-        path: /bin/sh
+        path: sh
         args:
         - -c
         - |
-          echo "User: ((aws_access_key_id))"
-          sh my-git-repo/simple-task.sh ((aws_access_key_id))
+          sh my-git-repo/simple-task.sh ((aws_access_key_id)) ((aws_secret_access_key))
 
       # run:
       #   path: sh
